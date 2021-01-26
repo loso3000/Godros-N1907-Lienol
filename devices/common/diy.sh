@@ -49,7 +49,7 @@ svn co https://github.com/godros/openwrt-app/trunk/luci-app-uugamebooster packag
 svn co https://github.com/godros/openwrt-app/trunk/luci-app-ttnode package/diy/luci-app-ttnode
 
 #cd package克隆passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/diy/
+#git clone https://github.com/xiaorouji/openwrt-passwall.git package/diy/
 #cd -
 ./scripts/feeds update -a
 ./scripts/feeds install -a
