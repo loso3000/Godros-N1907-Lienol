@@ -31,8 +31,8 @@ sed -i 's/DEPENDS:=/DEPENDS:=+AdGuardHome /g' package/diy/luci-app-adguardhome/M
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/diy/luci-theme-argon
 git clone https://github.com/sirpdboy/luci-theme-opentopd.git package/luci-theme-opentopd
 
-git clone https://github.com/godros/luci-app-eqos.git package/diy/luci-app-eqos
-git clone https://github.com/godros/luci-app-godproxy.git package/diy/luci-app-godproxy
+git clone https://github.com/god-os/luci-app-eqos.git package/diy/luci-app-eqos
+git clone https://github.com/god-os/luci-app-godproxy.git package/diy/luci-app-godproxy
 git clone https://github.com/tty228/luci-app-serverchan.git package/diy/luci-app-serverchan
 #git clone https://github.com/destan19/OpenAppFilter.git package/diy/OpenAppFilter
 git clone https://github.com/Lienol/openwrt-OpenAppFilter.git package/diy/OpenAppFilter
@@ -45,8 +45,8 @@ git clone https://github.com/awesome-openwrt/luci-app-control-mia package/luci-a
 
 git clone https://github.com/garypang13/luci-app-dnsfilter.git package/diy/luci-app-dnsfilter
 
-svn co https://github.com/godros/openwrt-app/luci-app-uugamebooster/branches/luci19 package/diy/luci-app-uugamebooster
-svn co https://github.com/godros/openwrt-app/luci-app-ttnode/branches/luci19 package/diy/luci-app-ttnode
+svn co https://github.com/god-os/openwrt-app/luci-app-uugamebooster/branches/luci19 package/diy/luci-app-uugamebooster
+svn co https://github.com/god-os/openwrt-app/luci-app-ttnode/branches/luci19 package/diy/luci-app-ttnode
 
 #cd package克隆passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/diy/
@@ -56,5 +56,5 @@ svn co https://github.com/godros/openwrt-app/luci-app-ttnode/branches/luci19 pac
 
 # 内核显示增加自己个性名称
 date=`date +%d.%m.%Y`
-sed -i "s/DISTRIB_DESCRIPTION.*/DISTRIB_DESCRIPTION='GodROS @%C From Lienol OpenWrt %V'/g" package/base-files/files/etc/openwrt_release
+sed -i "s/DISTRIB_DESCRIPTION.*/DISTRIB_DESCRIPTION='GodOS @%C From Lienol OpenWrt %V'/g" package/base-files/files/etc/openwrt_release
 sed -i "s/# REVISION:=x/REVISION:= $date/g" include/version.mk
