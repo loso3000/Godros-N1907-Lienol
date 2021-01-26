@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: GodOS-1907-From-Lienol
+name: GodROS-N1907-From-Lienol
 
 on: 
   #push:
@@ -410,7 +410,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
         files: "${{ env.FIRMWARE }}/*"
-        name: ${{ env.date2 }}-GodOS-${{matrix.target}} ${{ env.EMOJI }}
+        name: ${{ env.date2 }}-GodROS-${{matrix.target}} ${{ env.EMOJI }}
         tag_name: ${{ env.date }}_${{matrix.target}}
         body_path: release.txt
 
@@ -419,7 +419,7 @@ jobs:
       continue-on-error: true
       if: env.UPLOAD_FIRMWARE_FOR_ARTIFACT == 'true'
       with:
-        name: ${{ env.date3 }}-GodOS-${{matrix.target}}
+        name: ${{ env.date3 }}-GodROS-${{matrix.target}}
         path: ${{ env.FIRMWARE }}
         
     - name: WeChat notification
