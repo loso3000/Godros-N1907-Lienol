@@ -63,8 +63,7 @@ sed -i 's/\"services\"/\"control\"/g' /usr/lib/lua/luci/controller/wol.lua
 
 
 #sed -i 's/downloads.openwrt.org/openwrt.proxy.ustclug.org/g' /etc/opkg/distfeeds.conf
-#sed -i 's/downloads.openwrt.org/mirrors.cloud.tencent.com\/openwrt/g' /etc/opkg/distfeeds.conf
-#sed -i 's/http/https/g' /etc/opkg/distfeeds.conf
+sed -i 's/downloads.openwrt.org/mirrors.cloud.tencent.com\/openwrt/g' /etc/opkg/distfeeds.conf
 sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' /etc/shadow
 
 sed -i "s/# //g" /etc/opkg/distfeeds.conf
@@ -88,6 +87,9 @@ wifi up
 #echo "DISTRIB_REVISION='N20.6.29 From Lienol'" >> /etc/openwrt_release
 #sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release
 #echo "DISTRIB_DESCRIPTION='OpenWrt '" >> /etc/openwrt_release
+
+# NEVER DROP THE EXISTING AUTHORS INFO | 禁止删除现有作者信息
+#sed -i 's/LUCI 17 Lienol/LuCI 17/g' /usr/lib/lua/luci/version.lua
 
 sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
