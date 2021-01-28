@@ -89,7 +89,7 @@ wifi up
 #echo "DISTRIB_DESCRIPTION='OpenWrt '" >> /etc/openwrt_release
 
 # NEVER DROP THE EXISTING AUTHORS INFO | 禁止删除现有作者信息
-#sed -i 's/LUCI 17 Lienol/LuCI 17/g' /usr/lib/lua/luci/version.lua
+sed -i 's/LuCI 17.01 Lienol/LuCI 17.01/g' /usr/lib/lua/luci/version.lua
 
 sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
