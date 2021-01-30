@@ -56,5 +56,5 @@ svn co https://github.com/godros/openwrt-app/trunk/luci-app-ttnode package/diy/l
 
 # 内核显示增加自己个性名称
 date=`date +%d.%m.%Y`
-sed -i "s/DISTRIB_DESCRIPTION.*/DISTRIB_DESCRIPTION='GodRos N%C From Lienol OpenWrt %V'/g" package/base-files/files/etc/openwrt_release
+sed -i "s/DISTRIB_DESCRIPTION.*/DISTRIB_DESCRIPTION='GodROS N%C From Lienol OpenWrt %V'/g" package/base-files/files/etc/openwrt_release
 sed -i "s/# REVISION:=x/REVISION:= $date/g" include/version.mk
